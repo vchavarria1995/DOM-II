@@ -1,5 +1,6 @@
 // Your code goes here
 
+//Navigation Color Mouse Over// 
 let navBar = document.querySelector('.nav');
 let navElements = navBar.querySelectorAll('.nav-link');
 let navElementsArr = Array.from(navElements);
@@ -15,10 +16,12 @@ navElementsArr.forEach(e =>{
     e.addEventListener('mouseover', navColorChanger);
 });
 
-document.querySelector('p').addEventListener('mouseup', () => {
-  let selection = document.getSelection ? document.getSelection() : document.selection.createRange();
-  let range = selection.getRangeAt(0);
-  let newNode = document.createElement('span');
-  newNode.setAttribute('class', 'selector'); //<span class = "selector"></span>
-  range.surroundContents(newNode); //<span class = "selector">text i selected</span>
-})
+
+//Sign Up Button On Click//
+ let signUp = document.querySelectorAll('.btn')
+ 
+ signUp.forEach(function(e) {
+  e.addEventListener('click', function() {
+    this.style.backgroundColor = "purple";
+  })
+});
