@@ -13,6 +13,13 @@ document.addEventListener("keydown", () => {
 	console.log(`Times user pressed key`);
 });
 
+//Pointer Event//
+let busPointer = document.querySelector('h1');
+
+busPointer.addEventListener('pointermove', (e) => {
+  console.log('Pointer moved');
+});
+
 //Navigation Color Mouse Over// 
 let navBar = document.querySelector('.nav');
 let navElements = navBar.querySelectorAll('.nav-link');
@@ -83,7 +90,7 @@ function changeFunBus(event) {
 document.addEventListener('keypress', changeFunBus)
 
 //Copy Event//
-let sectionText = document.querySelectorAll("p");
+let sectionText = document.querySelectorAll('p');
 sectionText.forEach((item) => {
 	item.addEventListener("copy", () => {
 		item.innerText = "Stop copying me!";
