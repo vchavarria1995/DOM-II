@@ -1,5 +1,13 @@
 // Your code goes here
 
+//Load Event//
+window.onload = function (event){
+  console.log(`Checking for ${event.type}`)
+}
+window.addEventListener('load', event => {
+  console.log(`The event ${event.type} happened`)
+})
+
 //Navigation Color Mouse Over// 
 let navBar = document.querySelector('.nav');
 let navElements = navBar.querySelectorAll('.nav-link');
