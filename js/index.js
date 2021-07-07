@@ -57,7 +57,7 @@ letsGoIMG.addEventListener('wheel', (e) => {
 });
 
 //Drag Event//
-let funBusDrag = document.querySelectorAll("h1");
+let funBusDrag = document.querySelectorAll('h1');
 funBusDrag.forEach(e => {
     e.draggable = true;
     let defaultText = e.innerText;
@@ -72,6 +72,15 @@ funBusDrag.forEach(e => {
         console.log(event.target)
     });
 });
+
+//Key Event//
+function changeFunBus(event) {
+  if (event.key === 'Enter') {
+  document.querySelector('h1').style.color = 'yellow'
+  }
+}
+
+document.addEventListener('keypress', changeFunBus)
 
 //Copy Event//
 let sectionText = document.querySelectorAll("p");
