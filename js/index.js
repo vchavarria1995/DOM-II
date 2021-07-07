@@ -6,7 +6,7 @@ window.onload = function (event){
 }
 window.addEventListener('load', event => {
   console.log(`The event ${event.type} happened`)
-})
+});
 
 //Navigation Color Mouse Over// 
 let navBar = document.querySelector('.nav');
@@ -41,7 +41,7 @@ funBusImage.addEventListener('dblclick', (event) => {
  signUp.forEach(function(e) {
   e.addEventListener('click', function() {
     this.style.backgroundColor = "purple";
-  })
+  });
 });
 
 //Map Image Scale on Mousewheel//
@@ -58,12 +58,20 @@ funBusDrag.forEach(e => {
     let defaultText = e.innerText;
     e.addEventListener("dragstart", () => {
         e.innerText = "You're Dragging The Fun Bus"
-    })
+    });
     e.addEventListener("dragend", () => {
         e.innerText = defaultText;
-    })
+    });
     e.addEventListener("dragleave", (event) => {
         e.innerText = event.target.innerText;
         console.log(event.target)
-    })
-})
+    });
+});
+
+//Copy Event//
+let sectionText = document.querySelectorAll("p");
+sectionText.forEach((item) => {
+	item.addEventListener("copy", () => {
+		item.innerText = "Stop copying me!";
+	});
+});
