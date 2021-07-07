@@ -25,7 +25,6 @@ navElementsArr.forEach(e =>{
 });
 
 //Fun Bus Image Double Click Scale//
-
 let funBus = document.querySelector('.intro');
 let funBusImage = document.querySelector('.intro img');
 funBusImage.addEventListener('dblclick', (event) => {
@@ -43,4 +42,11 @@ funBusImage.addEventListener('dblclick', (event) => {
   e.addEventListener('click', function() {
     this.style.backgroundColor = "purple";
   })
+});
+
+
+let letsGoIMG = document.querySelector ('.content-section img');
+
+letsGoIMG.addEventListener('wheel', (e) => {
+  letsGoIMG.style.transform = 'scale(1.4)';
 });
