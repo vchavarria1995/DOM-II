@@ -8,6 +8,11 @@ window.addEventListener('load', event => {
   console.log(`The event ${event.type} happened`)
 });
 
+//Key Down Event//
+document.addEventListener("keydown", () => {
+	console.log(`Times user pressed key`);
+});
+
 //Navigation Color Mouse Over// 
 let navBar = document.querySelector('.nav');
 let navElements = navBar.querySelectorAll('.nav-link');
