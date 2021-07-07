@@ -16,10 +16,21 @@ navElementsArr.forEach(e =>{
     e.addEventListener('mouseover', navColorChanger);
 });
 
+//Fun Bus Image Double Click Scale//
+
+let funBus = document.querySelector('.intro');
+let funBusImage = document.querySelector('.intro img');
+funBusImage.addEventListener('dblclick', (event) => {
+    funBusImage.style.transform = 'scale(1.2)';
+    event.stopPropagation();
+    funBus.addEventListener('dblclick', () => {
+        funBus.style.transform = 'scale(1.2)';
+    });
+});
 
 //Sign Up Button On Click//
  let signUp = document.querySelectorAll('.btn')
- 
+
  signUp.forEach(function(e) {
   e.addEventListener('click', function() {
     this.style.backgroundColor = "purple";
