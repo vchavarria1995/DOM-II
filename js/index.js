@@ -44,9 +44,26 @@ funBusImage.addEventListener('dblclick', (event) => {
   })
 });
 
-
+//Map Image Scale on Mousewheel//
 let letsGoIMG = document.querySelector ('.content-section img');
 
 letsGoIMG.addEventListener('wheel', (e) => {
   letsGoIMG.style.transform = 'scale(1.4)';
 });
+
+//Drag Event//
+let funBusDrag = document.querySelectorAll("h1");
+funBusDrag.forEach(e => {
+    e.draggable = true;
+    let defaultText = e.innerText;
+    e.addEventListener("dragstart", () => {
+        e.innerText = "You're Dragging The Fun Bus"
+    })
+    e.addEventListener("dragend", () => {
+        e.innerText = defaultText;
+    })
+    e.addEventListener("dragleave", (event) => {
+        e.innerText = event.target.innerText;
+        console.log(event.target)
+    })
+})
